@@ -1,0 +1,30 @@
+<div class="card mt-3">
+  <div class="card-body">
+    <h5 class="card-title">Add Product</h5>
+    <form>
+      <div class="form-group">
+        <label for="name">Product Name</label>
+        <input type="text" id="name" [(ngModel)]="product.name" name="name" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" id="price" [(ngModel)]="product.price" name="price" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" [(ngModel)]="product.description" name="description" class="form-control"
+          required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="">Product Image</label>
+        <input type="file" class="form-control" (change)="onFileChange($event)" placeholder="Enter Product Image"
+          name="ImageFile" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-2" (click)="onSubmit()">Add Product</button>
+    </form>
+  </div>
+</div>
